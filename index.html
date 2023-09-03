@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+  <a-scene vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam; 
+  sourceWidth:1280; sourceHeight:960; 
+  displayWidth: 1280; displayHeight: 960; 
+  debugUIEnabled: false;" >
+
+    <a-assets>
+      <img id ="flight" src="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/VR-AR-ProjectCards/2.png">
+      <img id ="menu" src="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/VR-AR-ProjectCards/6.png">
+      <img id ="ar_navigation" src="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/VR-AR-ProjectCards/5.png">
+      <img id ="places" src="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/VR-AR-ProjectCards/3.png">
+      
+      <img id ="shooting" src="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/VR-AR-ProjectCards/4.png">
+
+    </a-assets>
+    <a-marker type="pattern" url="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/pattern-marker/virtual-flight/pattern-icon-01.patt">
+      <a-plane src="#flight" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+    <a-marker type="pattern" url="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/pattern-marker/ar-menu-card/pattern-icon-02.patt">
+      <a-plane src="#menu" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+    <a-marker type="pattern" url="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/pattern-marker/ar-navigation/pattern-icon-03.patt">
+      <a-plane src="#ar_navigation" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+    <a-marker type="pattern" url="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/pattern-marker/virtual-tour/pattern-icon-04.patt">
+      <a-plane src="#places" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+    
+    <a-marker type="pattern" url="./C-187 STUDENT ACTIVITY/PRO-C187-Code-Ref-main/pattern-marker/shooting-game/pattern-icon-06.patt">
+      <a-plane src="#shooting" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+  </a-scene>
+</body>
+
+</html>
